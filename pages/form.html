@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+    <h1>Cuéntanos un poco de ti</h1>
+    <p>Por favor rellena este formulario con la información solicitada</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <fieldset>
+            <label for="first-name">Ingresa tu nombre: <input type="text" id="first-name" name="first-name" required></label>
+            <label for="last-name">Ingresa tus apellidos: <input type="text" id="last-name" name="last-name" required></label>
+            <label for="email">Ingresa tu correo: <input type="email" id="email" name="email" required></label>
+            <label for="new-password">Ingresa una contraseña <input type="password" id="new-password" name="password" required pattern="[a-z0-5]{8,}"></label>
+        </fieldset>
+        <fieldset>
+            <label for="personal-account"><input type="radio" name="account-type" id="personal-account" class="inline"> Soy una persona </label>
+            <label for="business-account"><input type="radio" name="account-type" id="business-account" class="inline"> Soy una empresa</label>
+            <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required name="terms" class="inline"/> Yo acepto <a href="https://www.coderhouse.es/legales">los terminos y condiciones</a>
+        </fieldset>
+        <fieldset>
+            
+            <label for="age">Ingresa tu edad (años): <input type="number" min="13" max="120" id="age" name="age"></label>
+            <label for="referrer">Cómo te enteraste de nosotros?
+              <select name="referrer" id="referrer">
+                  <option value="">(select one)</option>
+                  <option value="1">Noticias</option>
+                  <option value="2">Youtube</option>
+                  <option value="3">Facebook</option>
+                  <option value="4">Other</option>
+              </select>
+            </label>
+            <label for="bio">Agrega una descripción breve:
+                <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tengo un negocio de empanadas por facebook a domicilio..."></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Subir" href="../index.html">
+    </form>
+    
+</body>
+</html>
