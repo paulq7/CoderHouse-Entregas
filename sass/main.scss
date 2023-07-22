@@ -1,0 +1,164 @@
+// Estilos generales
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #fcf3e3;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+// Estilos para el navbar
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    background-color: #6CBAA4;
+    
+    // Estilos para el menú
+    ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0;
+        
+        // Estilos para cada elemento del menú
+        li {
+            color: #ed4c87;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+        
+        // Estilos para los enlaces
+        a {
+            display: block;
+            padding: 10px 30px;
+            color: #f2ad5e;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+
+// Estilos para el contenido principal
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+main {
+    display: block;
+}
+
+// Media Query para todos los dispositivos
+@media screen and (max-width: 1024px) {
+    #navbar {
+        width: 100%;
+        position: relative;
+        min-width: 0; // Para evitar superposición en dispositivos pequeños
+    }
+    #main-doc {
+        margin-left: 0;
+    }
+}
+$primary-color: #f2ad5e;
+$secondary-color: #6c757d;
+$light-color: #4d4e53;
+
+// Estilos del botón
+.btn {
+  display: inline-block;
+  border: 1px solid $primary-color;
+  border-radius: 50px; // Bordes redondeados
+  color: $primary-color;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: .25rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+  width: auto;
+}
+
+// Estilos para el botón de tipo "outline"
+.btn-outline-light {
+  color: $light-color;
+  background-color: transparent;
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+// Estilos para el botón cuando está deshabilitado
+.btn[disabled] {
+  opacity: 0.65;
+  pointer-events: none;
+}
+// Variables
+$animation-duration: 0.3s;
+$animation-timing-function: ease-in-out;
+$navbar-link-color: #ed4c87;
+$h1-hover-color: #f2ad5e;
+
+#navbar {
+  ul li a,
+  h1 {
+    transition: color $animation-duration $animation-timing-function;
+    &:hover {
+      color: $navbar-link-color;
+    }
+  }
+}
+
+.main-section {
+  h1 {
+    transition: color $animation-duration $animation-timing-function;
+    &:hover {
+      color: $h1-hover-color;
+    }
+  }
+}
+
+#navbar {
+  ul li a,
+  h1 {
+    transition: transform $animation-duration $animation-timing-function;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.main-section {
+  h1 {
+    transition: transform $animation-duration $animation-timing-function;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
