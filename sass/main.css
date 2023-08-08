@@ -14,6 +14,11 @@ p {
   margin-inline-end: 0px;
 }
 
+h1 {
+  text-align: center;
+  padding-left: 3px;
+ }
+
 #navbar {
   position: fixed;
   min-width: 290px;
@@ -135,4 +140,4 @@ main {
 }
 .main-section h1:hover {
   transform: translateY(-5px);
-}/*# sourceMappingURL=main.css.map */
+}
